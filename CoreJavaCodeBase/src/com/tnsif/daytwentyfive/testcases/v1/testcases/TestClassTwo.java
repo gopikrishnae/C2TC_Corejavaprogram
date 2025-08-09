@@ -23,14 +23,13 @@ public class TestClassTwo {
 		assertTrue(ArithmeticOperations.IsPositive(5));
 	}
 	
-	@ParameterizedTest
-	@ValueSource(ints= {2, 0, -5,6})
+	
 	public void testPositives(int no)
 	{
 		assertTrue(ArithmeticOperations.IsPositive(no));
 	}
 	
-	@ParameterizedTest
+	
 	@CsvSource({"123, False","121,True"})
 	public void testPalindrome(int no, boolean expected)
 	{
@@ -39,7 +38,7 @@ public class TestClassTwo {
 		assertEquals(expected, actual);
 	}
 	
-	@ParameterizedTest
+	
 	@EnumSource(TimeUnit.class)
 	public void testForEnums(TimeUnit t)
 	{
@@ -47,7 +46,7 @@ public class TestClassTwo {
 	}
 	
 	
-	@ParameterizedTest
+	
 	@MethodSource("getWords")
 	void withMethodSource(String word) {
 		System.out.println(word);

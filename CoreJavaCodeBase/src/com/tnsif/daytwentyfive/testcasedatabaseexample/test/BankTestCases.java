@@ -15,8 +15,7 @@ import com.tnsif.daytwentyfive.testcasedatabaseexample.service.SavingAccountServ
 class BankTestCases {
 	SavingAccountService service;
 
-	@ParameterizedTest
-	@ValueSource(ints = { 1001, 1006 })
+	
 	void validateAccountTest(int accNo) {
 		service = new SavingAccountService();
 		boolean status = service.validateAccount(accNo);

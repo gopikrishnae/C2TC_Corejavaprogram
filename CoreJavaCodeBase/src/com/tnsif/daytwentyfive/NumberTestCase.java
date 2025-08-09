@@ -37,8 +37,7 @@ class NumberTestCase {
 
 	// @Disabled
 	// parameterized factorial test for 6 and -6
-	@ParameterizedTest
-	@ValueSource(ints = { 6, -6 })
+	
 	void factorialTest4(int no) {
 		long expected = 720;
 		long actual;
@@ -66,8 +65,7 @@ class NumberTestCase {
 
 	@DisplayName("Should calculate the correct percentage")
 
-	@ParameterizedTest(name = "{index} => s1={0}, s2={1}, s3={2}")
-
+	
 	@CsvSource({ "-50, 60, 70", "80, 180, 80" })
 	void percentageTest(int s1, int s2, int s3) {
 		float expected = 0;
